@@ -18,11 +18,19 @@ h2 {
 }
 
 span {
-    color: #457b9d;
+  color: #457b9d;
 }
 
 .tag {
-    background-color: #e63946;
-    color: #f1faee;
-    font-size: 16px;
+  background-color: #e63946;
+  color: #f1faee;
+  font-size: 16px;
+}
+
+.post a {
+  color: #457b9d;
+}
+
+footer a {
+  color: #e63946;
 }
