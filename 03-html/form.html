@@ -8,6 +8,7 @@
   </head>
 
   <body>
+    <!-- Initial form that asks for username and password -->
     <h1>Forms</h1>
     <form action="/form">
       <p>
@@ -108,7 +109,31 @@
           placeholder="Type something here."
         ></textarea>
       </p>
+      <button>Submit</button>
+    </form>
 
+    <hr />
+    <h2>Validations</h2>
+    <form action="/dummy">
+      <p>
+        <label for="first">Enter First Name</label>
+        <input type="text" name="first" id="first" required />
+      </p>
+      <p>
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          minlength="5"
+          maxlength="20"
+          required
+        />
+      </p>
+      <p>
+        <label for="url">Enter url</label>
+        <input type="url" name="url" id="url" required />
+      </p>
       <button>Submit</button>
     </form>
   </body>
