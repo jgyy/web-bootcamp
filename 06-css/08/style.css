@@ -1,11 +1,32 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
 div {
-  width: 200px;
-  height: 200px;
+  background-color: #e5989b;
+  width: 70%;
+  height: 20%;
 }
 
 h1 {
   background-color: pink;
-  width: 100px;
+  font-size: 40px;
+  width: 200px;
+  padding: 50px;
+  margin: 0;
+  border: 1px solid black;
+  line-height: 200%;
+}
+
+span {
+  background-color: paleturquoise;
+  border: 1px solid black;
+  margin-left: 30px;
+  padding: 10px;
 }
 
 #one {
@@ -14,6 +35,8 @@ h1 {
   border-color: black;
   border-style: solid;
   box-sizing: border-box;
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 
 #two {
@@ -22,7 +45,8 @@ h1 {
   border-color: #ffcdb2;
   border-style: dashed;
   border-left-width: 8px;
-  box-sizing: border-box;
+  padding-right: 50px;
+  margin: 20px;
 }
 
 #three {
@@ -35,4 +59,53 @@ h1 {
 
 #four {
   background-color: #b5686b;
+}
+
+button {
+  font-size: 1em;
+  padding: 0 1em;
+  border-radius: 0.5em;
+}
+
+section {
+  background-color: #6d6875;
+  width: 800px;
+  height: 800px;
+}
+
+#ems h2 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+#ems h3 {
+  font-size: 1.5em;
+}
+
+#ems p {
+  font-size: 1em;
+}
+
+#ems article {
+  font-size: 20px;
+}
+
+#ems ul {
+  font-size: 1.5em;
+}
+
+#rems h2 {
+  font-size: 3rem;
+}
+
+#rems h3 {
+  font-size: 2rem;
+}
+
+#rems ul {
+  font-size: 0.8rem;
+}
+
+#rems button {
+  font-size: 1.5rem;
 }
