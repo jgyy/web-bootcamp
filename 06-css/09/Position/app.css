@@ -7,6 +7,33 @@ div {
   display: inline-block;
 }
 
-#middle {
+.middle {
   background-color: #81b29a;
+}
+
+#static .middle {
+  position: static;
+  top: 100px;
+}
+
+#relative .middle {
+  position: relative;
+  top: 50px;
+  left: 50px;
+}
+
+#absolute {
+  position: relative;
+}
+
+#absolute .middle {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+#fixed .middle {
+  position: fixed;
+  top: 0;
+  left: 400px;
 }
