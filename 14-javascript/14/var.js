@@ -1,0 +1,15 @@
+console.log(12 + 34);
+let year = 2021;
+console.log(year);
+let numHens = 5;
+let numRoosters = 1;
+console.log(numHens);
+console.log(numRoosters);
+let totalChickens = numHens + numRoosters;
+console.log(totalChickens);
+numHens = 6;
+console.log(numHens);
+numHens = numHens +  1;
+console.log(numHens);
+totalChickens = numHens + numRoosters;
+console.log(totalChickens);
