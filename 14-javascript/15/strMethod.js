@@ -1,0 +1,15 @@
+console.log("hello".length);
+let msg = "leave me alone right now i hate you plz";
+console.log(msg);
+let angryMsg = msg.toUpperCase();
+console.log(angryMsg);
+console.log("LOLOLOLOLOL!!!!!!!!".toLowerCase());
+let userInput = "  hello my name is tim tomtammy pping pong";
+console.log(userInput);
+console.log(userInput.trim());
+console.log("  qwdwqd  ".trim());
+console.log("_____QWdw2fe2".trim());
+let greeting = "   hello again!!! ";
+console.log(greeting);
+console.log(greeting.trim().toUpperCase());
+console.log(greeting.trim().toUpperCase().toLowerCase());
