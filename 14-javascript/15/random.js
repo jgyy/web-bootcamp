@@ -1,0 +1,13 @@
+console.log(Math.PI);
+console.log(Math.E);
+console.log(Math.floor(23.9));
+console.log(Math.floor(23.99999999));
+console.log(Math.ceil(34.1));
+console.log(Math.random());
+console.log(Math.random() * 5);
+console.log(Math.floor(Math.random() * 5));
+console.log(Math.floor(Math.random() * 5) + 1);
+console.log(Math.floor(Math.random() * 10) + 1);
+console.log(Math.floor(Math.random() * 3) + 20);
+console.log(Math.pow(2, 3));
+console.log(2 ** 3);
