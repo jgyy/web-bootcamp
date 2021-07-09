@@ -1,0 +1,10 @@
+console.log("HELLO");
+console.log(1 + 4);
+console.log(1 + 4, "HI", true);
+console.warn("UH OH WARNING!");
+console.error("UH OH ERROR!");
+// alert("HI THERE!");
+prompt("Please enter a number");
+let userInput = prompt("Please enter a number");
+console.log(userInput);
+console.log(userInput + 1);
