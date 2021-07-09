@@ -1,0 +1,13 @@
+console.log(1 == 1);
+console.log(1 == "1");
+console.log(null == undefined);
+console.log(1 == 2);
+console.log("a" == "b");
+console.log(0 == false);
+console.log(1 === 1);
+console.log(1 === "1");
+console.log(0 === false);
+console.log(1 != 2);
+console.log(1 != "2");
+console.log(1 != "1");
+console.log(1 !== "1");
