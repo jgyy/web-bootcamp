@@ -1,0 +1,13 @@
+console.log(true);
+console.log("asdfvghjkl");
+const bassist = "Paul";
+console.log(bassist[0]);
+let colors = [];
+console.log(colors);
+console.log(typeof colors);
+let days = ["Monday", "Tuesday", "Wednesday"];
+console.log(days);
+console.log(days.length);
+console.log([].length);
+let kitchenSink = [true, undefined, 12, 9.9999, NaN, false, null, "HIIII!!"];
+console.log(kitchenSink);
