@@ -1,0 +1,10 @@
+console.log(true);
+let username = "danny";
+console.log(username);
+let favAnimal = "Dumbo Octopus";
+console.log(favAnimal);
+console.log("23");
+console.log(23);
+console.log("");
+console.log("I told her 'go away'");
+console.log('She said "I hate you"');
