@@ -1,0 +1,18 @@
+console.log("hi" === "hi");
+console.log(["hi", "bye"] === ["hi", "bye"]);
+console.log([1] === [1]);
+console.log([1] == [1]);
+console.log([] == []);
+let luckyNum = 87;
+console.log([1, 2, 3] == [1, 2, 3]);
+let nums = [1, 2, 3];
+let numsCopy = nums;
+console.log(nums);
+console.log(numsCopy);
+nums.push(4);
+console.log(nums);
+console.log(numsCopy);
+numsCopy.pop();
+console.log(nums);
+console.log(numsCopy);
+console.log(numsCopy === nums);
