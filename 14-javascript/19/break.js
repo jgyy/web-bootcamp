@@ -1,19 +1,8 @@
-const prompt = require("prompt");
-const schema = {
-  name: "prompt",
-  description: "Hey, say something",
-};
+const readline = require("readline-sync");
+const prompt = (description) => readline.question(description);
 
-prompt.start();
-
-const query = () => {
-  prompt.get([schema], function (err, res) {
-    input = res.prompt;
-    if (input.toLowerCase() != "stop copying me") {
-      console.log(input);
-      query();
-    }
-  });
-};
-
-query();
+while (true) {
+  const input = prompt("Hey say something: ");
+  if (input.toLowerCase() == "stop copying me") break;
+  console.log(input);
+}
