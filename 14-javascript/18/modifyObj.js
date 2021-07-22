@@ -1,0 +1,10 @@
+const midTerms = { danielle: 96, thomas: 78 };
+console.log(midTerms);
+console.log(midTerms.thomas);
+midTerms.thomas = 79;
+console.log(midTerms);
+midTerms.thomas = "C+";
+midTerms["danielle"] = "A+";
+midTerms.ezra = "B+";
+midTerms["antonio"] = "A-";
+console.log(midTerms);
