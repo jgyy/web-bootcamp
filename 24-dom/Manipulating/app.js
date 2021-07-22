@@ -1,12 +1,10 @@
-const allLinks = document.querySelectorAll('a');
-
-// for (let link of allLinks) {
-//     link.innerText = 'I AM A LINK!!!!'
-// }
-
+const allLinks = document.querySelectorAll("a");
+const linkText = [];
 
 for (let link of allLinks) {
-    link.style.color = 'rgb(0, 108, 134)';
-    link.style.textDecorationColor = 'magenta';
-    link.style.textDecorationStyle = 'wavy'
+  index = Math.floor(Math.random() * linkText.length);
+  linkText.splice(index, 0, link.innerHTML);
+}
+for (let i = 0; i < allLinks.length; i++) {
+  allLinks[i].innerHTML = linkText[i];
 }
