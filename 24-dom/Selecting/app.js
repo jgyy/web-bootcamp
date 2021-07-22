@@ -1,19 +1,18 @@
 const allImages = document.getElementsByTagName("img");
 
 for (let img of allImages) {
-  img.src =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg";
+  const size = String(Math.floor(Math.random() * 400) + 400);
+  const link = `https://picsum.photos/${size}/${size}`;
+  img.src = link;
 }
 
-const squareImages = document.getElementsByClassName("square");
-
-for (let img of squareImages) {
-  img.src =
-    "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg";
-}
-
-const links = document.querySelectorAll("p a");
+const links = document.querySelectorAll("a");
+const linkList = [];
 
 for (let link of links) {
-  console.log(link.href);
+  const index = Math.floor(Math.random() * linkList.length);
+  linkList.splice(index, 0, link.href);
+}
+for (let i = 0; i < links.length; i++) {
+  links[i].href = linkList[i];
 }
