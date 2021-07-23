@@ -10,11 +10,11 @@ tweetForm.addEventListener("submit", (e) => {
   bTag.append(username.value);
   newTweet.append(bTag);
   newTweet.append(`- ${tweet.value}`);
-  if (username.value && tweet.value) {
-    tweetsContainer.append(newTweet);
-  } else {
-    alert("Please enter username and tweet message");
-  }
+  username.value && tweet.value && tweetsContainer.append(newTweet);
   username.value = "";
   tweet.value = "";
+});
+
+tweetsContainer.addEventListener("click", function (e) {
+  e.target.nodeName === "LI" && e.target.remove();
 });
