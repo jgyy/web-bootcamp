@@ -13,7 +13,7 @@ tweetForm.addEventListener("submit", (e) => {
   if (username.value && tweet.value) {
     tweetsContainer.append(newTweet);
   } else {
-    alert("Please enter username and tweet message.");
+    alert("Please enter username and tweet message");
   }
   username.value = "";
   tweet.value = "";
