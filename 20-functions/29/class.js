@@ -4,6 +4,7 @@ class Color {
     this.g = g;
     this.b = b;
     this.name = name;
+    this.calcHSL();
   }
   innerRGB() {
     const { r, g, b } = this;
@@ -19,19 +20,7 @@ class Color {
     const { r, g, b } = this;
     return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1)}`;
   }
-  hsl() {
-    const { h, s, l } = this;
-    return `hsl(${h},${s}%, ${l}%)`;
-  }
-  fulllySaturated() {
-    const { h, l } = this;
-    return `hsl(${h},100%, ${l}%)`;
-  }
-  opposite() {
-    const { h, s, l } = this;
-    const newHue = (h + 180) % 360;
-    return `hsl(${newHue},${s}%, ${l}%)`;
-  }
+
   calcHSL() {
     let { r, g, b } = this;
     // Make r, g, and b fractions of 1
@@ -68,13 +57,31 @@ class Color {
     this.s = s;
     this.l = l;
   }
+
+  hsl() {
+    const { h, s, l } = this;
+    return `hsl(${h},${s}%, ${l}%)`;
+  }
+  fulllySaturated() {
+    const { h, l } = this;
+    return `hsl(${h},100%, ${l}%)`;
+  }
+  opposite() {
+    const { h, s, l } = this;
+    const newHue = (h + 180) % 360;
+    return `hsl(${newHue},${s}%, ${l}%)`;
+  }
 }
 
 const tomato = new Color(255, 67, 89, "tomato");
-console.log(tomato.r, );
-console.log(tomato.innerRGB());
-console.log(tomato.rgb());
-console.log(tomato.rgba(0.5));
-console.log(tomato.hex());
-console.log(tomato.hsl());
-console.log(tomato.fulllySaturated());
+console.log("r:", tomato.r);
+console.log("g:", tomato.g);
+console.log("b:", tomato.b);
+console.log("name:", tomato.name);
+console.log("innerRGB:", tomato.innerRGB());
+console.log("rgb:", tomato.rgb());
+console.log("rgba:", tomato.rgba(0.5));
+console.log("hex:", tomato.hex());
+console.log("hsl:", tomato.hsl());
+console.log("fullySaturated:", tomato.fulllySaturated());
+console.log("opposite:", tomato.opposite());
