@@ -1,6 +1,10 @@
 {
   "dependencies": {
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1",
     "prompt": "^1.1.0",
-    "readline-sync": "^1.4.10"
-  }
+    "readline-sync": "^1.4.10",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "type": "module"
 }
