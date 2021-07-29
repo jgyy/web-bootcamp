@@ -1,10 +1,35 @@
 {
   "dependencies": {
     "axios": "^0.21.1",
+    "colors": "^1.4.0",
+    "cowsay": "^1.5.0",
+    "figlet": "^1.5.0",
+    "franc": "^5.0.0",
+    "g": "^2.0.1",
+    "give-me-a-joke": "^0.4.0",
+    "langs": "^2.0.0",
     "node-fetch": "^2.6.1",
     "prompt": "^1.1.0",
     "readline-sync": "^1.4.10",
     "xmlhttprequest": "^1.8.0"
   },
-  "type": "module"
+  "type": "module",
+  "name": "web-bootcamp",
+  "description": "Redoing my node.js learning from the beginning all the way until I can be node.js certified which is difficult to pass",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgyy/web-bootcamp.git"
+  },
+  "author": "jgyy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgyy/web-bootcamp/issues"
+  },
+  "homepage": "https://github.com/jgyy/web-bootcamp#readme"
 }
