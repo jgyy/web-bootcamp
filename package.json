@@ -10,6 +10,7 @@
     "franc": "^5.0.0",
     "g": "^2.0.1",
     "give-me-a-joke": "^0.4.0",
+    "joi": "^17.4.2",
     "langs": "^2.0.0",
     "lorem-ipsum": "^2.0.3",
     "method-override": "^3.0.0",
