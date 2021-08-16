@@ -3,6 +3,7 @@ import cities from "./cities.js";
 import { places, descriptors } from "./seedHelpers.js";
 
 const lorem = new LoremIpsum({ wordsPerSentence: { max: 99, min: 1 } });
+const loremSentence = () => lorem.generateSentences(1);
 const cityList = () => cities.sort(() => Math.random() - 0.5);
 const sample = (array) => array[Math.floor(Math.random() * array.length)];
 
@@ -18,9 +19,9 @@ const campgroundDetails = (city) => {
     location: `${city.city} ${city.state}`,
     title: `${sample(descriptors)} ${sample(places)}`,
     image: image(),
-    description: lorem.generateSentences(1),
+    description: loremSentence(),
     price: Math.floor(Math.random() * 10000) / 100,
   };
 };
 
-export { campgroundDetails, cityList };
+export { campgroundDetails, cityList, loremSentence };
