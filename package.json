@@ -2,6 +2,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "colors": "^1.4.0",
+    "cookie-parser": "^1.4.5",
     "cowsay": "^1.5.0",
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
@@ -30,7 +31,6 @@
   "description": "Redoing my node.js learning from the beginning all the way until I can be node.js certified which is difficult to pass",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
