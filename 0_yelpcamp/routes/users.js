@@ -2,18 +2,8 @@ import express from "express";
 import passport from "passport";
 import catchFunc from "../utils/catchAsync.js";
 import User from "../models/user.js";
-import { userSchema } from "../schemas.js";
 import { loremSentence } from "../seeds/campgroundDetails.js";
-
-const validateUser = (req, res, next) => {
-  const { error } = userSchema.validate(req.body);
-  if (error) {
-    const msg = error.details.map((el) => el.message).join(",");
-    throw new ExpressError(msg, 400);
-  } else {
-    next();
-  }
-};
+import { validateUser } from "../middleware.js";
 
 const router = express.Router({ mergeParams: true });
 

@@ -1,4 +1,5 @@
 import { LoremIpsum } from "lorem-ipsum";
+import User from "../models/user.js";
 import cities from "./cities.js";
 import { places, descriptors } from "./seedHelpers.js";
 
@@ -6,6 +7,7 @@ const lorem = new LoremIpsum({ wordsPerSentence: { max: 99, min: 1 } });
 const loremSentence = () => lorem.generateSentences(1);
 const cityList = () => cities.sort(() => Math.random() - 0.5);
 const sample = (array) => array[Math.floor(Math.random() * array.length)];
+const user = async () => await User.find({});
 
 const image = () => {
   const url = "https://source.unsplash.com/random/";
@@ -14,8 +16,9 @@ const image = () => {
   return `${url}${w}x${h}`;
 };
 
-const campgroundDetails = (city) => {
+const campgroundDetails = async (city) => {
   return {
+    author: sample(await user())._id,
     location: `${city.city} ${city.state}`,
     title: `${sample(descriptors)} ${sample(places)}`,
     image: image(),

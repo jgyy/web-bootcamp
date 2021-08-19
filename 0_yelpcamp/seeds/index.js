@@ -16,8 +16,8 @@ db.once("open", () => {
 
 const seedDB = async () => {
   await Campground.deleteMany({});
-  for (let city of cityList()) {
-    const camp = new Campground(campgroundDetails(city));
+  for (let city of cityList().slice(0, 9)) {
+    const camp = new Campground(await campgroundDetails(city));
     await camp.save();
   }
 };
