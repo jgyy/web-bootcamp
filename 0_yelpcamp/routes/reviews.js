@@ -2,6 +2,7 @@ import express from "express";
 import catchFunc from "../utils/catchAsync.js";
 import Campground from "../models/campground.js";
 import Review from "../models/review.js";
+import isLoggedIn from "../middleware.js";
 import { reviewSchema } from "../schemas.js";
 
 const validateReview = (req, res, next) => {
@@ -17,6 +18,7 @@ const validateReview = (req, res, next) => {
 const router = express.Router({mergeParams: true});
 router.post(
   "/",
+  isLoggedIn,
   validateReview,
   catchFunc(async (req, res, next) => {
     const campground = await Campground.findById(req.params.id);
@@ -31,6 +33,7 @@ router.post(
 
 router.delete(
   "/:reviewId",
+  isLoggedIn,
   catchFunc(async (req, res, next) => {
     const { id, reviewId } = req.params;
     await Review.findByIdAndDelete(reviewId);

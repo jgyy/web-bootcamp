@@ -1,6 +1,7 @@
 import express from "express";
 import catchFunc from "../utils/catchAsync.js";
 import Campground from "../models/campground.js";
+import isLoggedIn from "../middleware.js";
 import { campgroundSchema } from "../schemas.js";
 import {
   campgroundDetails,
@@ -23,20 +24,22 @@ router.get(
   "/",
   catchFunc(async (req, res, next) => {
     const campgrounds = await Campground.find({});
-    res.render("campground/index", { campgrounds });
+    res.render("campgrounds/index", { campgrounds });
   })
 );
 
 router.get(
   "/new",
+  isLoggedIn,
   catchFunc((req, res, next) => {
     const campgroundDetail = campgroundDetails(cityList()[0]);
-    res.render("campground/new", { campgroundDetail });
+    res.render("campgrounds/new", { campgroundDetail });
   })
 );
 
 router.post(
   "/",
+  isLoggedIn,
   validateCampground,
   catchFunc(async (req, res, next) => {
     const campground = new Campground(req.body.campground);
@@ -58,24 +61,26 @@ router.get(
       req.flash("error", "Cannot find that campground.");
       return res.redirect("/campgrounds");
     }
-    res.render("campground/show", params);
+    res.render("campgrounds/show", params);
   })
 );
 
 router.get(
   "/:id/edit",
+  isLoggedIn,
   catchFunc(async (req, res, next) => {
     const campground = await Campground.findById(req.params.id);
     if (!campground) {
       req.flash("error", "Cannot find that campground.");
       return res.redirect("/campgrounds");
     }
-    res.render("campground/edit", { campground });
+    res.render("campgrounds/edit", { campground });
   })
 );
 
 router.put(
   "/:id",
+  isLoggedIn,
   validateCampground,
   catchFunc(async (req, res, next) => {
     const { id } = req.params;
@@ -89,6 +94,7 @@ router.put(
 
 router.delete(
   "/:id",
+  isLoggedIn,
   catchFunc(async (req, res, next) => {
     const { id } = req.params;
     await Campground.findByIdAndDelete(id);
